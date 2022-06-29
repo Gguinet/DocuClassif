@@ -33,4 +33,8 @@ The ouput is a dict with the predicted labels. ```model``` is to be chosen in ``
 ### Ideas of improvement:
 - [ ] (ML) Few-shot Learning adding a last layer of prediction for the label class. 
 - [ ] (Soft. Eng.) Dockerize the Python Server, following for instance [1](https://chatbotslife.com/deploying-transformer-models-1350876016f)
+<<<<<<< HEAD
 - [ ] Extend to [Lex Glue Dataset](https://huggingface.co/datasets/lex_glue)
+=======
+- [ ] Extend to [Lex Glue Dataset](https://huggingface.co/datasets/lex_glue)
+>>>>>>> 74afa1887d9fcb47118b8d70231ff5bcf7511c1f
