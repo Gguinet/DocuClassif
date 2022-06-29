@@ -1,8 +1,6 @@
 import logging
-import os
 import argparse
 import pickle
-import nltk
 import numpy as np
 
 from nltk.corpus import stopwords
@@ -12,7 +10,6 @@ from sklearn.multiclass import OneVsRestClassifier
 from sklearn.svm import LinearSVC
 from sklearn import metrics
 from sklearn.pipeline import Pipeline
-from sklearn.model_selection import PredefinedSplit
 from sklearn.preprocessing import MultiLabelBinarizer
 from datasets import load_dataset
 
@@ -22,7 +19,7 @@ def main():
     parser.add_argument('--dataset',  default='multi_eurlex')
     parser.add_argument('--text_limit', default=2000)
     parser.add_argument('--n_classes', default=21)
-    parser.add_argument('--training_size', default=10)
+    parser.add_argument('--training_size', default=-1)
     parser.add_argument('--save_best', default=True)
 
 

@@ -28,6 +28,7 @@ def single_classif(premise,label):
 
 def predict_labels_zero(premise,labels=LABEL_LIST):
 
+    # TODO: Can be done in parallel fairly easily
     return {"labels":[label for label in labels if single_classif(premise,label)>= THRESHOLD]}
 
 

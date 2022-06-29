@@ -1,14 +1,10 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, constr, validator
 from typing import List
-from transformers import pipeline
-from params import MODEL_NAME,LABEL_LIST
+from params import LABEL_LIST
 from svm_classif import predict_labels_svm
 from zero_classif import predict_labels_zero
 
-
-classifier = pipeline("zero-shot-classification",
-                      model=MODEL_NAME)
 
 app = FastAPI(
     title="Document Classification API",
