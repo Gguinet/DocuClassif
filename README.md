@@ -9,7 +9,9 @@
 
 ### Use of API:
 
-Locally, the API can be called by using the following instructions:
+Launch FastAPI using ```uvicorn main:app``` with ```--reload``` if in testing mode.
+
+Then, the API can be called by using the following instructions:
 ```
 curl -X 'POST' 'http://127.0.0.1:8000/classification' \
     -H 'accept: application/json' \
@@ -18,7 +20,7 @@ curl -X 'POST' 'http://127.0.0.1:8000/classification' \
          "labels":["Business","Machine Learning","Sport"], \
          "model": "zero-shot"}'
 ```
-The ouput is a dict with the predicted labels. ```model``` is to be chosen in ```['svm','zero-shot']```. ```labels``` is an option input if the ```zero-shot``` model is used (no specification leads to a default list specified in  ```params.py```). Note that SVM model only works with the EuraLex Labels (specified in  ```params```).
+The ouput is a dict with the predicted labels. ```model``` is to be chosen in ```['svm','zero-shot']```. ```labels``` is an optional input if the ```zero-shot``` model is used (no specification leads to a default list specified in  ```params.py```). Note that SVM model only works with the EuraLex Labels (specified in  ```params```).
 
 ### File Structure:
 - ```main.py``` is the API structure.
@@ -28,13 +30,12 @@ The ouput is a dict with the predicted labels. ```model``` is to be chosen in ``
   - ```svm_classif.py``` is the SVM classifier trained on Multi-Eurlex and stored in ```models/svm```. 
   - Note that ```svm_classif_training.py``` allows to train the SVM model on a given dataset (e.g. EuraLex) while performing a Grid Search for Hyperparameter Tunning.
 -  ```zero_classif.py``` is the Zero-Shot NLI Classifier imported from Hugging Face Library (default is ```facebook/bart-large-mnli```).
+- ```frontend.py``` allows to call a Gradio Frontend to interact with the API.
 
 
-### Ideas of improvement:
-- [ ] (ML) Few-shot Learning adding a last layer of prediction for the label class. 
-- [ ] (Soft. Eng.) Dockerize the Python Server, following for instance [1](https://chatbotslife.com/deploying-transformer-models-1350876016f)
-<<<<<<< HEAD
-- [ ] Extend to [Lex Glue Dataset](https://huggingface.co/datasets/lex_glue)
-=======
-- [ ] Extend to [Lex Glue Dataset](https://huggingface.co/datasets/lex_glue)
->>>>>>> 74afa1887d9fcb47118b8d70231ff5bcf7511c1f
+### Some ideas of improvement:
+- [ ] (ML) Few-shot Learning adding a last layer of prediction for the label class (i.e. classify embeddings).
+- [ ] (ML) Mix SVM and Few/zero-shot learning for Long Document Purpose.
+- [ ] (Soft. Eng.) Dockerize the Python Server, following for instance [1](https://chatbotslife.com/deploying-transformer-models-1350876016f).
+- [ ] Extend to [Lex Glue Dataset](https://huggingface.co/datasets/lex_glue).
+
