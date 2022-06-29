@@ -1,0 +1,66 @@
+MODEL_NAME = "facebook/bart-large-mnli"
+
+TOKENIZER_NAME = "facebook/bart-large-mnli"
+
+LABEL_LIST = [
+    'scientific_report',
+    'resume',
+    'memo',
+    'specification',
+    'news article',
+    'letter',
+    'form',
+    'budget',
+    'email',
+    'invoice',
+    'presentation',
+    'questionnaire',
+    'advertisement']
+
+EURALEX_LABELS = [
+    '100149',
+    '100160',
+    '100148',
+    '100147', 
+    '100152', 
+    '100143', 
+    '100156', 
+    '100158', 
+    '100154', 
+    '100153', 
+    '100142', 
+    '100145', 
+    '100150', 
+    '100162', 
+    '100159', 
+    '100144', 
+    '100151', 
+    '100157', 
+    '100161', 
+    '100146', 
+    '100155']
+
+EURALEX_LABELS_LIST = [
+    'social questions',
+    'industry',
+    'finance',
+    'trade',
+    'business and competition',
+    'international relations',
+    'agriculture',
+    'forestry and fisheries',
+    'production',
+    'technology and research',
+    'transport',
+    'employment and working conditions',
+    'politics',
+    'law',
+    'education and communications',
+    'international organisations',
+    'energy',
+    'European Union',
+    'science',
+    'agri-foodstuffs',
+    'geography',
+    'economics',
+    'environment']
