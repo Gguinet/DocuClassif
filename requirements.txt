@@ -3,6 +3,8 @@ pydantic
 typing
 tensorflow
 requests
+gradio
+json
 logging
 os
 argparse
