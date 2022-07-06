@@ -5,7 +5,7 @@
 - Support Vector Machine, using TD-IDF of n-grams as features.
 
 ### Dataset used for Training/Testing:
-- [Multi-Eurlex](https://huggingface.co/datasets/multi_eurlex#dataset-structure)
+- [Multi-Eurlex](https://huggingface.co/datasets/multi_eurlex#dataset-structure) and associated [paper](https://arxiv.org/pdf/2109.00904.pdf).
 
 ### Use of API:
 
@@ -37,5 +37,9 @@ The ouput is a dict with the predicted labels. ```model``` is to be chosen in ``
 - [ ] (ML) Few-shot Learning adding a last layer of prediction for the label class (i.e. classify embeddings).
 - [ ] (ML) Mix SVM and Few/zero-shot learning for Long Document Purpose.
 - [ ] (Soft. Eng.) Dockerize the Python Server, following for instance [1](https://chatbotslife.com/deploying-transformer-models-1350876016f).
-- [ ] Extend to [Lex Glue Dataset](https://huggingface.co/datasets/lex_glue).
+- [ ] Extend to [Lex Glue Dataset](LexGLUE: A Benchmark Dataset for Legal Language Understanding in English).
 
+### Credit to:
+- [LexGlue](https://github.com/coastalcph/lex-glue)
+- [lmtc-eurlex57k](https://github.com/iliaschalkidis/lmtc-eurlex57k)
+- [muit-eurlex](https://github.com/nlpaueb/multi-eurlex)
